@@ -38,8 +38,8 @@
                                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                                 </li>
                                 <li class="nav-item d-none d-sm-inline-block">
-                                    <a href="" class="nav-link">Employee</a>
-                                </li>
+                                    <a href="{{route('employee.index')}}" class="nav-link">Employee</a>
+                                </li>   
                                 <li class="nav-item d-none d-sm-inline-block">
                                     <a href="" class="nav-link">Task</a>
                                 </li>
