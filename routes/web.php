@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\TaskController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,3 +19,4 @@ Route::get('/', function () {
     return view('layouts.dashboard');
 });
 Route::resource('employee',EmployeeController::class);
+Route::resource('task',TaskController::class);
