@@ -5,28 +5,28 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Employee extends Model
+class Task extends Model
 {
     use HasFactory;
-
-    protected $table ="employees";
-
-  /**
+    protected $table ="tasks";
+    /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
     protected $fillable = [
         'name',
-        'email',
-        'designation',
-        'contact_number',
-        'birthdate',
-        'degree',
-        'college_name',
-        'expertise_in',
+        'type',
+        'employee_id',
+        'description',
+        'total_time',
+        'start_time',
+        'end_time',
     ];
-    public function task(){
-        return $this->hasMany(Task::class);
+
+     public function employee()
+    {
+        return $this->belongsTo(Employee::class);
     }
+
 }

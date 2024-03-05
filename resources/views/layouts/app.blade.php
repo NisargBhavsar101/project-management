@@ -41,7 +41,7 @@
                                     <a href="{{route('employee.index')}}" class="nav-link">Employee</a>
                                 </li>   
                                 <li class="nav-item d-none d-sm-inline-block">
-                                    <a href="" class="nav-link">Task</a>
+                                    <a href="{{route('task.index')}}" class="nav-link">Task</a>
                                 </li>
                             
                         </ul>
