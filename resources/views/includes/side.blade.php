@@ -12,12 +12,13 @@
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
   
-        <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-       
+        <img src="dist/img/tecurity.jpeg" class="img-circle elevation-2" alt="User Image">
+        
         </div>
         
         <div class="info">
-          <a href="#" class="d-block"></a>
+          <a href="#" class="d-block">TTM</a>
+          <p class="bg-light">Tecurity Task-Manager</p>
         </div>
       </div>
 
@@ -35,6 +36,13 @@
               </p>
             </a>
           </li>
+          <li class="nav-item ">
+          <a href="{{route('employee.index')}}" class="nav-link">Employee</a>
+          </li>
+          <li class="nav-item ">
+          <a href="{{route('task.index')}}" class="nav-link">Task</a>
+
+          </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
@@ -48,12 +56,6 @@
                 <a href="" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>UserList</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>AddUser</p>
                 </a>
               </li>
             </ul>

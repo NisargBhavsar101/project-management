@@ -53,7 +53,8 @@
                 <th>TaskName</th>
                 <th>Type</th>
                 <th>Description</th>
-                <th>Spend Time</th>
+                <th>Created By</th>
+                <th>Spend Time</th>    
                 <th>Created At</th>
                 <th>Action</th>
               </tr>
@@ -69,6 +70,11 @@
                 <td>{{$item->name}}</td>
                 <td>{{$item->type}}</td>
                 <td>{{$item->description}}</td>
+                @foreach($employees as $employee)
+                  @if($employee->id == $item->employee_id)
+                    <td>{{$employee->name}}</td>
+                  @endif
+                @endforeach
                 <td>{{$item->total_time}}</td>
                 <td>{{$item->created_at->diffForHumans()}}</td>
                 <td>
