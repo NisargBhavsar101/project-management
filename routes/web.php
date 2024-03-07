@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
+
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\TaskController;
 use Illuminate\Support\Facades\Route;
@@ -15,8 +17,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('layouts.dashboard');
+
+
+Route::middleware('auth')->group(function () {
+    Route::get('/', function () {
+        return view('home');
+    });
+    Route::resource('employee',EmployeeController::class);
+    Route::resource('task',TaskController::class);
 });
-Route::resource('employee',EmployeeController::class);
-Route::resource('task',TaskController::class);
+Auth::routes(['verify'=> true]);
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

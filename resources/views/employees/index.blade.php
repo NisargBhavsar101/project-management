@@ -41,12 +41,16 @@
     <div class="card">
       <div class="card-header">
         <h3 class="card-title">Employees List</h3>
-        <a href="{{route('employee.create')}}" style="margin-left:1070px;" class="btn btn-dark">Create Employee</a>
-      </div>
+        <div class="row justify-content-end">
+          <div class="col-md-auto">
+            <a href="{{ route('employee.create') }}" class="btn btn-dark">Create Employee</a>
+          </div>
+        </div>      </div>
 
       <!-- /.card-header -->
       
       <div class="card-body">
+      <div class="table-responsive">
         <table class="table table-bordered  table-hover">
           <thead>
             <tr>
@@ -87,6 +91,7 @@
           </tbody>
       </div>
       </table>
+      </div>
       <div class=" mt-3 d-flex justify-content-end">
         <ul class="pagination">
           <li class="paginate_button page-item previous" id="example2_previous">

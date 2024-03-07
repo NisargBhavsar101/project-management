@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\TaskRequest;
 use App\Models\Employee;
 use App\Models\Task;
 use Illuminate\Http\Request;
@@ -14,8 +15,8 @@ class TaskController extends Controller
     public function index()
     {
         $data =Task::with('employee')->get();
-
-        return view('tasks.index',compact('data'));
+        $employees = Employee::all();
+        return view('tasks.index',compact('data','employees',));
         
     }
 
@@ -31,7 +32,7 @@ class TaskController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(TaskRequest $request)
     {
         Task::create($request->all());
 

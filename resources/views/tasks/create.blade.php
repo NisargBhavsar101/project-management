@@ -113,19 +113,6 @@
     </div>
     @include('includes.footer')
     <script>
-        $(document).ready(function() {
-            $("#quickForm").validate({
-                rules: {
-                    user: "required",
-                    email: "required",
-                    password: "required|confirmed|min:8",
-                    terms: "required",
-                }
-            });
-            $('#quickForm').submit(validate);
-        });
-    </script>
-    <script>
         document.addEventListener("DOMContentLoaded", function() {
             let startTime = null;
             let endTime = null;
