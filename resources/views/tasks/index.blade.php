@@ -2,7 +2,7 @@
 
 <html lang="en">
 
-<title>Employees List</title>
+<title>Task List</title>
 
 @extends('includes.head')
 
